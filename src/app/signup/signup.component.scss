@@ -1,6 +1,11 @@
 .git-practical-signup-container {
   .git-practical-welcome-title {
     text-align: center;
+    h1 {
+      color: whitesmoke;
+      margin:0;
+      padding: 1rem;
+    }
   }
   .width80 {
     width: 80% !important;
@@ -44,7 +49,7 @@
     }
   }
   .git-practical-login-link {
-    margin-top: 10px;
+    padding: 10px;
     text-align: right;
   }
   .git-practical-signup-text {
@@ -58,4 +63,18 @@
 .required:after {
   content: " *";
   color: red;
+}
+
+
+.back-ground-image {
+  min-height: 100vh;
+  //max-height: 100vh;
+  width: 100%;
+  //text-align: center;
+  
+  background-size: 100% 100%;
+  
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center; 
 }

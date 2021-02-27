@@ -1,4 +1,4 @@
-<div class="git-practical-signup-container">
+<div class="git-practical-signup-container back-ground-image" style="background-image: url('/assets/login-background.png');  ">
     <div class="git-practical-welcome-title">
       <h1>
         Sign Up Form
@@ -31,14 +31,15 @@
               [ngClass]="{'error-red-border': signupForm.get('password')?.errors && (signupForm.get('password')?.touched || submittedInvalidForm)}">
             <p *ngIf="(signupForm.get('password')?.errors && signupForm.get('password')?.errors.required) && (signupForm.get('password')?.touched || submittedInvalidForm)">*Password required</p>
             <p *ngIf="(signupForm.get('password')?.errors && signupForm.get('password')?.errors.minLength) && (signupForm.get('password')?.touched || submittedInvalidForm)">*Password should have minimum 6 characters</p>
-            <p *ngIf="(signupForm.get('password')?.errors && signupForm.get('password')?.errors.pattern) && (signupForm.get('password')?.touched || submittedInvalidForm)">*Valid password required(minimum one number and one character required)</p>
+            <p *ngIf="(signupForm.get('password')?.errors && signupForm.get('password')?.errors.pattern) && (signupForm.get('password')?.touched || submittedInvalidForm)">*Valid password required(minimum one number, one character and one special character required.)</p>
           </div>
           <button class="git-practical-button" type="submit">Sing Up</button>
         </form>
+        <div class="git-practical-login-link">
+          Already have an account?
+          <a [routerLink]="['/login']">Login</a>
+        </div>
       </div>
-      <div class="git-practical-login-link">
-        Already have an account?
-        <a [routerLink]="['/login']">Login</a>
-      </div>
+      
     </div>
   </div>

@@ -66,7 +66,7 @@ export class DashboardComponent implements OnInit, AfterViewInit {
       .then((response) => {
         if (response) {
           this.handleValidResponseOnProfileSearch(response);
-          // this.searchForGithub.reset();
+          this.searchForGithub.reset();
         }
         else {
           window.alert('User not found.');

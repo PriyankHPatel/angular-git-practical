@@ -1,3 +1,4 @@
+import { EmailRegex, PasswordRegex } from './../helper/utils';
 import { Component, OnInit } from '@angular/core';
 import { LocalStorageService } from '../services/local-storage.service';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
@@ -28,10 +29,10 @@ export class SignupComponent implements OnInit {
     this.signupForm = new FormGroup({
       "name": new FormControl(null, [Validators.required]),
       "email": new FormControl(null, [Validators.required,
-        Validators.pattern(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)]),
+        Validators.pattern(EmailRegex)]),
       "password": new FormControl(null, [Validators.required, Validators.minLength(6),
         
-        Validators.pattern(/^(?=.*[0-9])(?=.*[a-zA-Z])([a-zA-Z0-9]+)$/)])
+        Validators.pattern(PasswordRegex)])
     })
   }
 

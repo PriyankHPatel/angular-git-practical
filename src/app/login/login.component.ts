@@ -1,3 +1,4 @@
+import { EmailRegex, PasswordRegex } from './../helper/utils';
 import { AuthService } from './../services/auth.service';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -28,9 +29,12 @@ export class LoginComponent implements OnInit {
   createLoginForm() {
     this.logInForm = new FormGroup({
       email: new FormControl(null, [Validators.required,
-        Validators.pattern(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)]),
-      password: new FormControl(null, [Validators.required, Validators.minLength(6),
-        Validators.pattern(/^(?=.*[0-9])(?=.*[a-zA-Z])([a-zA-Z0-9]+)$/)])
+        // Validators.pattern(EmailRegex)
+      ]),
+      password: new FormControl(null, [Validators.required, 
+        // Validators.minLength(6),
+        // Validators.pattern(PasswordRegex)
+      ])
     });
   }
 
