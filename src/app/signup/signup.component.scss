@@ -1,0 +1,61 @@
+.git-practical-signup-container {
+  .git-practical-welcome-title {
+    text-align: center;
+  }
+  .width80 {
+    width: 80% !important;
+  }
+  .git-practical-signup-form-container {
+    padding: 0px 35%;
+    input {
+      padding: 8px;
+      display: block;
+      border: none;
+      border: 1px solid #ccc;
+      width: 100%;
+      overflow: visible;
+      border-radius: 10px;
+    }
+    .git-practical-button {
+      color: #fff;
+      background-color: #4caf50;
+      padding: 8px 25px;
+      border-radius: 5px;
+      display: flex;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .git-practical-button:hover {
+      color: #000 !important;
+      background-color: #ccc !important;
+      cursor: pointer;
+    }
+    .git-practical-signup-form-box {
+      background-color: #eff0f1;
+      .label-input-container {
+        margin-left: 5%;
+        margin-bottom: 10px;
+        p {
+          margin: 0px;
+          color: red;
+          font-size: 13px;
+        }
+      }
+    }
+  }
+  .git-practical-login-link {
+    margin-top: 10px;
+    text-align: right;
+  }
+  .git-practical-signup-text {
+    text-align: center;
+  }
+}
+
+.error-red-border {
+  border: red 1px solid !important;
+}
+.required:after {
+  content: " *";
+  color: red;
+}

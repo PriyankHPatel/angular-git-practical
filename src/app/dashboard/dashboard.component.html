@@ -1,0 +1,57 @@
+<div class="git-practical-dashboard">
+  <div class="git-practical-dashboard-container">
+      <div class="git-practical-dashboard-header">
+        <div class="git-practical-user-name" *ngIf="logedInUser.name">
+          Name: {{logedInUser.name}}
+        </div>
+        <h1 class="git-practical-text">
+          Welcome to git-practical!
+        </h1>
+        <div class="git-practical-logout-button">
+          <span class="git-practical-logout" (click)="logoutClickHandler()">
+            Logout
+          </span>
+        </div>
+      </div>
+      <div class="git-practical-dashboard-git-add-container">
+        <form [formGroup]="searchForGithub" (ngSubmit)="searchForGithubProfile()">
+          <div class="git-practical-search-container">
+            <input formControlName="reprositoryName" type="text" placeholder="Please enter github username">
+            <button class="git-practical-button" type="submit">Add To Grid</button>
+          </div>
+        </form>
+      </div>
+      <div class="git-practical-dashboard-github-search">
+        <form [formGroup]="githubGridFormGroup" class="git-practical-dashboard-github-search-form">
+          <!-- <input type="text" placeholder="search in grid" [(ngModel)]="searchText" (keydown)="onSearchTextChanges($event)"> -->
+          <input type="text" placeholder="Search in grid" formControlName="gridSearch">
+        </form>
+      </div>
+      
+      <div class="git-practical-dashboard-github-user-grid-container">
+        
+        <div class="git-practical-dashboard-grid-rows">
+          <table>
+            <tr>
+              <th>Login</th>
+              <th>Name</th>
+              <th>Avatar url</th>
+              <th>Public repos</th>
+              <th></th>
+            </tr>
+            
+            <tr *ngFor="let eachGithubUserData of localStorageGithubUserListData; index as i" >
+              <td>{{eachGithubUserData.login}}</td>
+              <td>{{eachGithubUserData.name}}</td>
+              <td>{{eachGithubUserData.avatar_url}}</td>
+              <td>{{eachGithubUserData.public_repos}}</td>
+              <td class="git-practical-delete-button"><button (click)="deleteRowClickHandler(eachGithubUserData)">Delete</button></td>
+            </tr>
+            <tr class="git-practical-no-records-found" *ngIf="!(localStorageGithubUserListData && localStorageGithubUserListData.length > 0)">
+              <td colspan="5">No Records found</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>

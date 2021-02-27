@@ -1,0 +1,91 @@
+.git-practical-login-container {
+  height: 100%;
+  position: relative;
+  display:  block;
+  .git-practical-welcome-title {
+    text-align: center;
+    h1 {
+      color: whitesmoke;
+      margin:0;
+      padding: 1rem;
+    }
+  }
+  .width80 {
+    width: 80% !important;
+  }
+  .git-practical-login-form-container {
+    padding: 0px 35%;
+    input {
+      padding: 8px;
+      display: block;
+      border: none;
+      border: 1px solid #ccc;
+      width: 100%;
+      overflow: visible;
+      border-radius: 10px;
+    }
+    .git-practical-button {
+      color: #fff;
+      background-color: #4caf50;
+      padding: 8px 25px;
+      border-radius: 5px;
+      display: flex;
+      margin-left: auto;
+      margin-right: auto;
+      font-weight: bolder;
+    }
+    .git-practical-button:hover {
+      color: #000 !important;
+      background-color: #ccc !important;
+      cursor: pointer;
+    }
+    .git-practical-login-form-box {
+      .git-practical-avatar.avatar {
+        width: 30px;
+        height: 30px;
+        overflow: hidden;
+        border-radius: 50%;
+        margin-right: 5px;
+      }
+      background-color: #eff0f1;
+      .label-input-container {
+        margin-left: 5%;
+        margin-bottom: 10px;
+        p {
+          margin: 0px;
+          color: red;
+          font-size: 13px;
+        }
+      }
+    }
+  }
+  .git-practical-signup-link {
+    padding: 10px;
+
+    text-align: right;
+  }
+  .git-practical-login-text {
+    text-align: center;
+  }
+}
+
+.error-red-border {
+  border: red 1px solid !important;
+}
+.required:after {
+  content: " *";
+  color: red;
+}
+
+.back-ground-image {
+    min-height: 100vh;
+    //max-height: 100vh;
+    width: 100%;
+    //text-align: center;
+    
+    background-size: 100% 100%;
+    
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center; 
+}

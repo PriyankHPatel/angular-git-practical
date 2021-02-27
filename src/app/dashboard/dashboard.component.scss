@@ -1,0 +1,109 @@
+.git-practical-dashboard {
+}
+.git-practical-dashboard-github-user-grid-container {
+    margin: 1rem;
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+    
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+    .git-practical-no-records-found {
+        border: 1px solid #dddddd;
+        padding: 8px;
+        td {
+            text-align: center;
+        }
+    }
+    .git-practical-delete-button {
+        text-align:center;
+        button {
+            background-color: #ff3e3e;
+            color: white;
+            padding: 4px 25px;
+            border-radius: 5px;
+        }
+        button:hover {
+            cursor: pointer;
+        }
+    }
+}
+.git-practical-dashboard-container {
+    .git-practical-text {
+        text-align: center;
+    }
+    input {
+        padding: 8px;
+        display: block;
+        border: none;
+        border: 1px solid #ccc;
+        width: 300px;
+        overflow: visible;
+        border-radius: 10px;
+    }
+    .git-practical-button {
+        color: #fff;
+        background-color: #4CAF50;
+        padding: 8px 25px;
+        border-radius: 5px;
+        display: flex;
+        margin-left: 10px;
+    }
+    .git-practical-button:hover {
+        color: #000!important;
+        background-color: #ccc!important;
+        cursor: pointer;
+    }
+    .git-practical-dashboard-git-add-container {
+        display: inline-block;
+        margin-left: 1rem;
+    }
+    .git-practical-dashboard-github-search {
+        display: inline-block;
+        width: 50%;
+        float: right;
+        margin-right: 1rem;
+        .git-practical-dashboard-github-search-form {
+            float: right;
+        }
+    }
+    .git-practical-search-container {
+        display: flex;
+    }
+    .git-practical-dashboard-header {
+        background-color: aliceblue;
+        margin-bottom: 1rem;
+        display: flex;
+        .git-practical-text {
+            width: 60%;
+        }
+        .git-practical-logout-button {
+            width: 20%;
+            margin: 22px;
+        }
+        span.git-practical-logout {
+            cursor: pointer;
+            float: right;
+            padding: 0.5rem;
+            color: whitesmoke;
+            height: fit-content;
+            background-color: #4c53af;     
+            border-radius: 5px;
+        }
+        .git-practical-logout:hover {
+            box-shadow: 1px 2px #888888;            
+
+        }
+
+        .git-practical-user-name{
+            font-weight: bolder;
+            padding: 30px;
+            width:20%
+        }
+    }
+}
+

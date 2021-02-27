@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "angular-git-practical"
+    }
+  },
+  "defaultProject": "angular-git-practical",
+  "cli": {
+    "analytics": false
+  }
 }

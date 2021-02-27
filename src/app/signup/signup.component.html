@@ -1,0 +1,44 @@
+<div class="git-practical-signup-container">
+    <div class="git-practical-welcome-title">
+      <h1>
+        Sign Up Form
+      </h1>
+    </div>
+    <div class="git-practical-signup-form-container">
+      <div class="git-practical-signup-form-box">
+        <div class="git-practical-avatar" style=" text-align: center;"  >
+          <img src="/assets/Untitled.png" alt="Avatar" style=" height: 50%;width: 50%;" class="avatar"  >
+        </div>
+        <form [formGroup]="signupForm" (ngSubmit)="signup()">
+          <div class="label-input-container">
+            <label class="required">Name</label>
+            <input formControlName="name" type="text" placeholder="Please enter your name" class="width80"
+              [ngClass]="{'error-red-border': signupForm.get('name')?.errors && (signupForm.get('name')?.touched || submittedInvalidForm)}">
+            <p *ngIf="(signupForm.get('name')?.errors && (signupForm.get('name')?.errors.required) && (signupForm.get('name')?.touched || submittedInvalidForm))">Name required</p>
+          </div>
+  
+          <div class="label-input-container">
+            <label class="required">Email</label>
+            <input formControlName="email" type="email" placeholder="Please enter your email" class="width80"
+              [ngClass]="{'error-red-border': signupForm.get('email')?.errors && (signupForm.get('email')?.touched || submittedInvalidForm)}">
+            <p *ngIf="(signupForm.get('email')?.errors && signupForm.get('email')?.errors.required) && (signupForm.get('email')?.touched || submittedInvalidForm)">*Email required</p>
+            <p *ngIf="(signupForm.get('email')?.errors && signupForm.get('email')?.errors.pattern) && (signupForm.get('email')?.touched || submittedInvalidForm)">*Valid email required</p>
+          </div>
+            
+          <div class="label-input-container">
+            <label class="required">Password</label>
+            <input formControlName="password" type="password" placeholder="Please enter your password" class="width80"
+              [ngClass]="{'error-red-border': signupForm.get('password')?.errors && (signupForm.get('password')?.touched || submittedInvalidForm)}">
+            <p *ngIf="(signupForm.get('password')?.errors && signupForm.get('password')?.errors.required) && (signupForm.get('password')?.touched || submittedInvalidForm)">*Password required</p>
+            <p *ngIf="(signupForm.get('password')?.errors && signupForm.get('password')?.errors.minLength) && (signupForm.get('password')?.touched || submittedInvalidForm)">*Password should have minimum 6 characters</p>
+            <p *ngIf="(signupForm.get('password')?.errors && signupForm.get('password')?.errors.pattern) && (signupForm.get('password')?.touched || submittedInvalidForm)">*Valid password required(minimum one number and one character required)</p>
+          </div>
+          <button class="git-practical-button" type="submit">Sing Up</button>
+        </form>
+      </div>
+      <div class="git-practical-login-link">
+        Already have an account?
+        <a [routerLink]="['/login']">Login</a>
+      </div>
+    </div>
+  </div>
